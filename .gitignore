@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+radio_recorder.log
+scheduled_recorder.log
+recording.log
+
+# Recordings (too large for git)
+recordings/
+*.mp3
+*.wav
+*.aac
+*.m4a
+
+# CSV files (data files)
+*.csv
+recordings_log.csv
+dead_stations_with_urls.csv
+wrm_candidates.csv
+dead_repairs.csv
+
+# Temporary files
+*.tmp
+*.temp
+still_missing.txt
+dead.txt
+working.txt
+
+# Large HTML files
+arab_cities_map.html
+
+# Backup files
+*.bak
+*.backup 
