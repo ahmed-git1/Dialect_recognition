@@ -242,15 +242,6 @@ chmod +x *.py
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
-
-This project is open source. Please check the license file for details.
-
-## 🙏 Acknowledgments
-
-- WorldRadioMap for providing radio station data
-- FFmpeg for audio processing capabilities
-- The Arabic radio community for maintaining these streams
 
 ## 📞 Support
 
@@ -259,11 +250,3 @@ For issues and questions:
 2. Verify your internet connection
 3. Ensure all dependencies are installed
 4. Check that FFmpeg is working: `ffmpeg -version`
-
-## 🌐 Repository
-
-Visit the repository at: [https://github.com/omarnj-lab/Dialect_recognition](https://github.com/omarnj-lab/Dialect_recognition)
-
----
-
-**Note**: This tool is designed for research and educational purposes. Please respect the terms of service of the radio stations you record from.
