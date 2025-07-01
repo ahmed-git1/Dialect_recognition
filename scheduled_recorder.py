@@ -102,7 +102,7 @@ class ScheduledRecorder:
 
     def get_cities(self) -> List[str]:
         """Get list of available cities."""
-        cities = list(self.radio.city_country_map.keys())
+        cities = list(self.radio.stations_by_city.keys())
         if not cities:
             logger.error("No cities found in the station data")
             # Try to load cities from the JSON file directly
@@ -249,7 +249,10 @@ def main():
                       help='List scheduled recording times and exit')
     parser.add_argument('--verify-only', action='store_true',
                       help='Only verify stations and exit')
-    
+
+    # --- addition ---
+    parser.add_argument('--repeat-every', type=int, help='Repeat recording every X minutes for all cities')
+
     args = parser.parse_args()
 
     recorder = ScheduledRecorder(args.stations, args.output, args.log)
@@ -263,6 +266,13 @@ def main():
         print("\nScheduled recording times:")
         for city, time in recorder.recording_times.items():
             print(f"{city}: {time}")
+        return
+
+    if args.repeat_every:
+        cities = recorder.get_cities()
+        for city in cities:
+            schedule.every(args.repeat_every).minutes.do(recorder.record_city, city)
+        recorder.run()
         return
 
     recorder.schedule_all_cities(args.start_hour, args.end_hour, args.interval)
