@@ -251,7 +251,7 @@ def main():
                       help='Only verify stations and exit')
 
     # --- addition ---
-    parser.add_argument('--repeat-every', type=int, help='Repeat recording every X minutes for all cities')
+    parser.add_argument('--repeat-every', type=int, help='Repeat recording every X minutes')
 
     args = parser.parse_args()
 
